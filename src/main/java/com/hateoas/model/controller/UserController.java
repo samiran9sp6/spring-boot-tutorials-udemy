@@ -41,7 +41,7 @@ public class UserController {
 		EntityModel<User> model = EntityModel.of(user);
 		WebMvcLinkBuilder link = linkTo(methodOn(this.getClass()).getUsers());
 		WebMvcLinkBuilder link2 = linkTo(methodOn(this.getClass()).getUser(id));
-		model.add(link.withRel("lists"));
+		model.add(link.withRel("list"));
 		model.add(link2.withRel("details"));
 		return model;
 	}
